@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar absolute dark color="dark-grey">
+    <v-app-bar app dark color="dark-grey">
       <v-app-bar-nav-icon />
       <v-toolbar-title>Gameslist</v-toolbar-title>
       <v-spacer />
