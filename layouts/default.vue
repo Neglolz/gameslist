@@ -1,34 +1,19 @@
 <template>
   <v-app>
-    <!--<v-navigation-drawer-->
-    <!--:mini-variant="miniVariant"-->
-    <!--:clipped="clipped"-->
-    <!--v-model="drawer"-->
-    <!--fixed-->
-    <!--app-->
-    <!--&gt;-->
-    <!--<v-list>-->
-    <!--<v-list-tile-->
-    <!--router-->
-    <!--:to="item.to"-->
-    <!--:key="i"-->
-    <!--v-for="(item, i) in items"-->
-    <!--exact-->
-    <!--&gt;-->
-    <!--<v-list-tile-action>-->
-    <!--<v-icon v-html="item.icon"></v-icon>-->
-    <!--</v-list-tile-action>-->
-    <!--<v-list-tile-content>-->
-    <!--<v-list-tile-title v-text="item.title"></v-list-tile-title>-->
-    <!--</v-list-tile-content>-->
-    <!--</v-list-tile>-->
-    <!--</v-list>-->
-    <!--</v-navigation-drawer>-->
-    <v-toolbar fixed app :clipped-left="clipped">
-      <!--<v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>-->
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-toolbar>
+    <v-app-bar absolute dark color="dark-grey">
+      <v-app-bar-nav-icon />
+      <v-toolbar-title>Gameslist</v-toolbar-title>
+      <v-spacer />
+      <!--<v-btn icon>-->
+      <!--<v-icon>mdi-magnify</v-icon>-->
+      <!--</v-btn>-->
+      <!--<v-btn icon>-->
+      <!--<v-icon>mdi-heart</v-icon>-->
+      <!--</v-btn>-->
+      <!--<v-btn icon>-->
+      <!--<v-icon>mdi-dots-vertical</v-icon>-->
+      <!--</v-btn>-->
+    </v-app-bar>
     <v-content>
       <v-container>
         <nuxt />
@@ -38,21 +23,26 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Gameslist'
-      }
+export default {
+  data() {
+    return {
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: "Gameslist"
     }
   }
+}
 </script>
+
+<style>
+.search-filter .v-label {
+  left: 20px !important;
+}
+.search-filter .v-icon {
+  margin-right: 15px !important;
+}
+</style>
