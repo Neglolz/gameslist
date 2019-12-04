@@ -27,6 +27,8 @@
             <v-alert v-else type="error">
               {{ data.metacritic }}
             </v-alert>
+            <v-spacer />
+            <v-alert type="success">Release date : {{ data.released }}</v-alert>
           </div>
         </v-parallax>
         {{ data.description }}
