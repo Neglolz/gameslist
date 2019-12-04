@@ -6,26 +6,28 @@
           <v-row align="center" justify="center">
             <v-col class="text-center" cols="12">
               <h1 class="display-1 font-weight-thin mb-4">{{ data.name }}</h1>
-              <v-alert v-if="data.metacritic > 85" type="success">
-                {{ data.metacritic }}
-              </v-alert>
-              <v-alert
-                v-else-if="data.metacritic < 85 && data.metacritic > 65"
-                type="info"
-              >
-                {{ data.metacritic }}
-              </v-alert>
-              <v-alert
-                v-else-if="data.metacritic < 65 && data.metacritic > 45"
-                type="warning"
-              >
-                {{ data.metacritic }}
-              </v-alert>
-              <v-alert v-else type="error">
-                {{ data.metacritic }}
-              </v-alert>
             </v-col>
           </v-row>
+          <div style="display:flex">
+            <v-alert v-if="data.metacritic > 85" type="success">
+              {{ data.metacritic }}
+            </v-alert>
+            <v-alert
+              v-else-if="data.metacritic < 85 && data.metacritic > 65"
+              type="info"
+            >
+              {{ data.metacritic }}
+            </v-alert>
+            <v-alert
+              v-else-if="data.metacritic < 65 && data.metacritic > 45"
+              type="warning"
+            >
+              {{ data.metacritic }}
+            </v-alert>
+            <v-alert v-else type="error">
+              {{ data.metacritic }}
+            </v-alert>
+          </div>
         </v-parallax>
         {{ data.description }}
       </v-card>
