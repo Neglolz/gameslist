@@ -1,19 +1,39 @@
 <template>
   <v-app>
-    <v-app-bar absolute dark color="dark-grey">
-      <v-app-bar-nav-icon />
-      <v-toolbar-title>Gameslist</v-toolbar-title>
-      <v-spacer />
-      <!--<v-btn icon>-->
-      <!--<v-icon>mdi-magnify</v-icon>-->
-      <!--</v-btn>-->
-      <!--<v-btn icon>-->
-      <!--<v-icon>mdi-heart</v-icon>-->
-      <!--</v-btn>-->
-      <!--<v-btn icon>-->
-      <!--<v-icon>mdi-dots-vertical</v-icon>-->
-      <!--</v-btn>-->
-    </v-app-bar>
+    <container>
+      <v-app-bar app dark color="dark-grey">
+        <v-app-bar-nav-icon />
+        <v-toolbar-title>Gameslist</v-toolbar-title>
+        <v-spacer />
+        <v-row justify="center" align="center">
+          <v-col cols="10">
+            <v-text-field
+              dense
+              outlined
+              clearable
+              rounded
+              solo
+              flat
+              label="Rechercher"
+              type="text"
+              color="dark-grey"
+              class="search-filter"
+              style="display:flex;position:relative"
+            >
+              <!--<v-btn icon>-->
+              <!--<v-icon>mdi-magnify</v-icon>-->
+              <!--</v-btn>-->
+              <!--<v-btn icon>-->
+              <!--<v-icon>mdi-heart</v-icon>-->
+              <!--</v-btn>-->
+              <!--<v-btn icon>-->
+              <!--<v-icon>mdi-dots-vertical</v-icon>-->
+              <!--</v-btn>-->
+            </v-text-field>
+          </v-col>
+        </v-row>
+      </v-app-bar>
+    </container>
     <v-content>
       <v-container>
         <nuxt />
